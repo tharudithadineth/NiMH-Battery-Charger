@@ -14,7 +14,7 @@ A reliable, fully analog smart battery charger for rechargeable AA Ni-MH batteri
 
 | Component | Description | Qty |
 | :--- | :--- | :---: |
-| **LM317T** | Adjustable voltage regulator (Configured for constant current) | 1 |
+| **LM317** | Adjustable voltage regulator (Configured for constant current) | 1 |
 | **TL431** | Precision programmable shunt regulator (Acts as the voltage sensor) | 1 |
 | **BC547** | NPN Transistor (Switches the Green LED ON) | 1 |
 | **BC177** | PNP Transistor (Switches the Yellow LED OFF) | 1 |
@@ -31,7 +31,7 @@ A reliable, fully analog smart battery charger for rechargeable AA Ni-MH batteri
 
 ## ⚙️ How It Works
 
-1. **Current Control:** The LM317T IC and the 5.6Ω resistor work together to create a steady output current of ~223mA. The 1N4007 diode acts as a one-way valve to ensure power flows safely into the battery.
+1. **Current Control:** The LM317 IC and the 5.6Ω resistor work together to create a steady output current of ~223mA. The 1N4007 diode acts as a one-way valve to ensure power flows safely into the battery.
 2. **Voltage Sensing:** The 10k Preset continuously samples the battery's terminal voltage and feeds it into the TL431 IC. 
 3. **Smart Switching:** * **While Charging:** The TL431 stays OFF. The BC177 transistor remains ON, lighting up the Yellow LED.
    * **When Full:** The battery reaches the calibrated threshold limit. The TL431 triggers ON, dropping its output to Ground. This instantly turns the BC177 OFF (Yellow LED turns off) and biases the BC547 ON (Green LED lights up).
